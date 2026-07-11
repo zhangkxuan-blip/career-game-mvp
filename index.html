@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>O*NET-Lite 隐性职业倾向测试 MVP</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <div class="creator-strip" aria-label="creator information">
+        <span>created by @zhangkxuan</span>
+        <span>AI Generated</span>
+      </div>
+
+      <section id="start-screen" class="screen active">
+        <p class="eyebrow">O*NET-Lite MVP</p>
+        <h1>隐性职业倾向测试</h1>
+        <p class="lead">
+          通过一组模糊情境选择，生成你的职业兴趣、工作风格和环境偏好画像。
+        </p>
+        <div class="notice">
+          这不是永久人格标签，而是你当前阶段较稳定的工作倾向快照。
+        </div>
+        <button id="start-btn" class="primary">开始测试</button>
+      </section>
+
+      <section id="quiz-screen" class="screen">
+        <header class="quiz-head">
+          <div>
+            <p id="chapter" class="eyebrow"></p>
+            <h2 id="question-title"></h2>
+          </div>
+          <div class="progress-copy">
+            <span id="current-index">1</span>/<span id="total-count">1</span>
+          </div>
+        </header>
+        <div class="progress-track">
+          <div id="progress-bar" class="progress-bar"></div>
+        </div>
+        <p id="question-text" class="question-text"></p>
+        <div id="options" class="options"></div>
+        <footer class="quiz-actions">
+          <button id="back-btn" class="secondary">上一题</button>
+          <button id="reset-btn" class="ghost">重新开始</button>
+        </footer>
+      </section>
+
+      <section id="stage-screen" class="screen">
+        <p id="stage-kicker" class="eyebrow"></p>
+        <h1 id="stage-title"></h1>
+        <p id="stage-summary" class="lead"></p>
+
+        <section class="result-block">
+          <h2 id="stage-map-title"></h2>
+          <div id="stage-bars" class="bars"></div>
+        </section>
+
+        <section class="result-block">
+          <h2>当前阶段详细画像</h2>
+          <div id="stage-detail-copy" class="detail-copy"></div>
+        </section>
+
+        <section class="result-block">
+          <h2>这一阶段的提示</h2>
+          <ul id="stage-notes"></ul>
+        </section>
+
+        <footer class="stage-actions">
+          <button id="stage-restart-btn" class="ghost">再测一次</button>
+          <button id="stage-continue-btn" class="primary">继续下一阶段</button>
+        </footer>
+      </section>
+
+      <section id="result-screen" class="screen">
+        <p class="eyebrow">你的当前画像</p>
+        <h1 id="result-title"></h1>
+        <p id="result-summary" class="lead"></p>
+
+        <section class="result-block">
+          <h2>综合画像地图</h2>
+          <div id="interest-bars" class="bars"></div>
+        </section>
+
+        <section class="result-block">
+          <h2>工作风格</h2>
+          <div class="split">
+            <div>
+              <h3>更突出的风格</h3>
+              <ul id="top-styles"></ul>
+            </div>
+            <div>
+              <h3>需要留意的风格</h3>
+              <ul id="low-styles"></ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="result-block">
+          <h2>适合你的工作环境</h2>
+          <ul id="context-list" class="tag-list"></ul>
+        </section>
+
+        <section class="result-block">
+          <h2>推荐行业与岗位</h2>
+          <div id="career-matches" class="match-list"></div>
+        </section>
+
+        <section class="result-block">
+          <h2>需要谨慎的方向</h2>
+          <ul id="avoid-list"></ul>
+        </section>
+
+        <section id="tension-block" class="result-block muted-block">
+          <h2>画像中的拉扯</h2>
+          <ul id="tension-list"></ul>
+        </section>
+
+        <section class="result-block">
+          <h2>当前阶段建议</h2>
+          <ol id="advice-list"></ol>
+        </section>
+
+        <button id="again-btn" class="primary">再测一次</button>
+        <button id="result-continue-btn" class="secondary hidden">继续下一阶段</button>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
