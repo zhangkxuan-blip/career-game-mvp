@@ -1,0 +1,17 @@
+{
+  "name": "onet-lite-career-game-mvp",
+  "version": "1.0.0",
+  "description": "这是一个纯静态 MVP，用来跑通测试流程：",
+  "main": "app.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.61.1"
+  }
+}
